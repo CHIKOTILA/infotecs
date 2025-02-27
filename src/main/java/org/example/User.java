@@ -1,6 +1,14 @@
 package org.example;
 
 public class User {
+    /**
+     * Данные ниже можно использовать для тестирования
+     * @host 185.58.207.63
+     * @port 22
+     * @user jora
+     * @password password
+     * @remoteFilePath "infotecs.json"
+     */
     private static String host;
     private static String username;
     private static String password;

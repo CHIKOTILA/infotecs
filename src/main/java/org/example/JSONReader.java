@@ -9,6 +9,25 @@ public class JSONReader {
     private static Map<String, String> domainIpMap = new TreeMap<>();
 
     public static void readJSON() {
+        try {
+            // Указываем путь к файлу
+            File file = new File(Main.localDirectory);
+
+            // Проверяем, существует ли файл
+            if (file.exists()) {
+                System.out.println("Файл уже существует.");
+            } else {
+                // Создаём новый файл
+                boolean created = file.createNewFile();
+                if (created) {
+                    System.out.println("Файл успешно создан.");
+                } else {
+                    System.out.println("Не удалось создать файл.");
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Ошибка при создании файла: " + e.getMessage());
+        }
         try (BufferedReader reader = new BufferedReader(new FileReader(Main.localDirectory))) {
             String line;
             StringBuilder jsonContent = new StringBuilder();
@@ -59,7 +78,7 @@ public class JSONReader {
 
 
         } catch (IOException e) {
-            System.err.println("Error reading the file: " + e.getMessage());
+            System.err.println("Ошибка чтения файла: " + e.getMessage());
         }
     }
 

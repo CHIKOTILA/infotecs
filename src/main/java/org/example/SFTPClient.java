@@ -7,6 +7,7 @@ public class SFTPClient {
         try {
             String localDirectory = Main.localDirectory;
             String remoteFilePath = Main.remoteFilePath;
+            System.out.println(localDirectory);
             System.out.println("Соединение с хостом...");
             JSch jsch = new JSch();
             Session session = jsch.getSession(user, host, port);
@@ -60,7 +61,7 @@ public class SFTPClient {
             System.out.println("Файл загружен на сервер");
         } catch (Exception e) {
             System.out.println("Соединение не установлено, проверьте введеные данные или права на запись");
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
     }
 }

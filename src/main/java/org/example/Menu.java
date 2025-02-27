@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Menu {
@@ -61,6 +62,21 @@ public class Menu {
                     Menu.clearConsole();
                     System.out.println("Загрузка отредактированного файла на хост...");
                     SFTPClient.uploadFileSFTP(user.getHost(), user.getPort(), user.getUsername(), user.getPassword());
+                    File file = new File(Main.localDirectory);
+
+                    // Проверяем, существует ли файл
+                    if (file.exists()) {
+                        // Пытаемся удалить файл
+                        boolean deleted = file.delete();
+
+                        if (deleted) {
+                            System.out.println("Локальный файл успешно удален.");
+                        } else {
+                            System.out.println("Не удалось удалить файл.");
+                        }
+                    } else {
+                        System.out.println("Файл не существует.");
+                    }
                     return;
                 default:
                     System.out.println("Такого пункта меню нет. Попробуйте снова.");
