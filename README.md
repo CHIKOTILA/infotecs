@@ -18,7 +18,7 @@
 *Чтобы запустить приложение необходимо:*
 1. Склонировать репозиторий с GitHub на компьютер
    ```sh
-   https://github.com/CHIKOTILA/Infotecs
+   [https://github.com/CHIKOTILA/Infotecs](https://github.com/CHIKOTILA/infotecs.git)
     ```
 2. Перейти в корневую директорию ДОПИСАТЬ
    
@@ -90,11 +90,11 @@
 
   <img width="523" alt="Добавление новой пары" src="https://github.com/user-attachments/assets/e96b6948-a571-4045-8dbe-5320ab81f650" />
   
-   <img width="281" alt="Ошибка добавления новой пары " src="https://github.com/user-attachments/assets/5077850f-2cea-496d-8b2f-2e8dc4dcae63" />
-
  >В случаях, если пользователь ввёл несуществующий IP,
  >будет
  >отображено сообщение об этом
+  <img width="281" alt="Ошибка добавления новой пары " src="https://github.com/user-attachments/assets/5077850f-2cea-496d-8b2f-2e8dc4dcae63" />
+
 
 
 6. Удаление пары **'Домен - адрес'** по его **id** или **домену**
@@ -113,5 +113,5 @@
    
 2. Запустить исполняемый **jar** файл проекта
    ```sh
-   java -jar out/artifacts/Infotecs_jar_tests/SFTPClientTest.jar
+   java -jar путь до папки/infotecs/out/artifacts/infotecs_jar/infotecs.jar
    ```
